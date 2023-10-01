@@ -1,16 +1,16 @@
 module.exports = {
   root: true,
-  ignorePatterns:   ["/out", "/.next", "/node_modules"],
+  ignorePatterns: ["/out", "/.next", "/node_modules"],
   parserOptions: {
     ecmaVersion: 8,
     sourceType: "module",
     ecmaFeatures: {
-      jsx: true
-    }
+      jsx: true,
+    },
   },
-  env:    {
+  env: {
     browser: true,
-    node: true
+    node: true,
   },
   extends: [
     "next/core-web-vitals",
@@ -19,57 +19,40 @@ module.exports = {
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:react/recommended",
+    "plugin:react-server-components/recommended",
+    "prettier",
   ],
   parser: "@typescript-eslint/parser",
   rules: {
-    indent: [
-      2,
-      2
-    ],
-    quotes: [
-      2,
-      "double"
-    ],
-    "linebreak-style": [
-      2,
-      "unix"
-    ],
-    semi: [
-      2,
-      "always"
-    ],
-    "no-multi-spaces": [
-      2
-    ],
-    "no-multiple-empty-lines": [
-      2
-    ],
     "object-curly-spacing": [
       "error",
       "always",
       {
-        arraysInObjects: true
-      }
+        arraysInObjects: true,
+      },
     ],
-    "import/order": ["error", {
-      groups: [
-        ["builtin", "external"],
-        "internal",
-        ["parent", "index", "sibling", "object"],
-      ],
-      pathGroups: [
-        {
-          pattern: "*.scss",
-          patternOptions: { matchBase: true },
-          group: "unknown",
-          position: "after",
-        }
-      ],
-      "newlines-between": "always",
-      alphabetize: {
-        order: "asc",
-      }
-    }],
+    "import/order": [
+      "error",
+      {
+        groups: [
+          ["builtin", "external"],
+          "internal",
+          ["parent", "index", "sibling", "object"],
+        ],
+        pathGroups: [
+          {
+            pattern: "*.scss",
+            patternOptions: { matchBase: true },
+            group: "unknown",
+            position: "after",
+          },
+        ],
+        "newlines-between": "always",
+        alphabetize: {
+          order: "asc",
+        },
+      },
+    ],
     "import/named": 0,
     "import/no-unresolved": 0,
     "no-undef": 0,
@@ -77,7 +60,5 @@ module.exports = {
     "no-var": 2,
     "compat/compat": 0,
     "react/react-in-jsx-scope": 0,
-    "jsx-a11y/click-events-have-key-events": 0,
-    "jsx-a11y/no-noninteractive-element-interactions": 0,
-  }
+  },
 };

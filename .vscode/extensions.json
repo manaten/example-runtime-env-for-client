@@ -3,7 +3,7 @@
     "dbaeumer.vscode-eslint",
     "editorconfig.editorconfig",
     "streetsidesoftware.code-spell-checker",
-    "asbjornh.vscode-module-templates",
-    "styled-components.vscode-styled-components",
+    "esbenp.prettier-vscode",
+    "GitHub.copilot"
   ]
 }
