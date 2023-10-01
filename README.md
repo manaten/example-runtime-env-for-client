@@ -1,3 +1,3 @@
 # example-runtime-env-for-client
 
-manaten's Next.js template.
+see https://blog.manaten.net/entry/runtime-env-for-client
