@@ -20,15 +20,10 @@ module.exports = {
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:react/recommended",
     "plugin:react-server-components/recommended",
+    "prettier",
   ],
   parser: "@typescript-eslint/parser",
   rules: {
-    indent: [2, 2],
-    quotes: [2, "double"],
-    "linebreak-style": [2, "unix"],
-    semi: [2, "always"],
-    "no-multi-spaces": [2],
-    "no-multiple-empty-lines": [2],
     "object-curly-spacing": [
       "error",
       "always",
@@ -65,7 +60,5 @@ module.exports = {
     "no-var": 2,
     "compat/compat": 0,
     "react/react-in-jsx-scope": 0,
-    "jsx-a11y/click-events-have-key-events": 0,
-    "jsx-a11y/no-noninteractive-element-interactions": 0,
   },
 };
