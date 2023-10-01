@@ -1,66 +1,37 @@
 {
-  "cSpell.words": [
-    "Chakra",
-    "nextjs"
-  ],
+  "cSpell.words": ["Chakra", "lintstagedrc", "nextjs"],
   "files.watcherExclude": {
     "**/target": true
   },
-  "editor.formatOnSave": false,
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
-  },
-  "module-templates.engine": "handlebars",
-  "module-templates.templates": {
-    "react-component": {
-      "displayName": "Component",
-      "defaultPath": "components",
-      "folder": "{{kebab type}}",
-      "questions": {
-        "name": "Component name",
-        "type": "atoms | molecules | organisms | templates",
-      },
-      "files": [
-        {
-          "name": "{{pascal name}}.tsx",
-          "content": [
-            "import { Box, StyleProps } from \"@chakra-ui/react\";",
-            "import React from \"react\";",
-            "",
-            "export type {{pascal name}}Props = StyleProps & React.PropsWithChildren;",
-            "",
-            "export const {{pascal name}}: React.FC<{{pascal name}}Props> = ({ children, ...props }) => (",
-            "  <Box {...props}>",
-            "    {children}",
-            "  </Box>",
-            ");",
-          ]
-        },
-        {
-          "name": "{{pascal name}}.stories.tsx",
-          "content": [
-            "import { ComponentStory, ComponentMeta } from \"@storybook/react\";",
-            "import React from \"react\";",
-            "",
-            "import { {{pascal name}} } from \"./{{pascal name}}\";",
-            "",
-            "const meta: ComponentMeta<typeof {{pascal name}}> = {",
-            "  title: \"{{kebab type}}/{{pascal name}}\",",
-            "  component: {{pascal name}},",
-            "  argTypes: {",
-            "  },",
-            "};",
-            "",
-            "export default meta;",
-            "",
-            "const Template: ComponentStory<typeof {{pascal name}}> = (args) => <{{pascal name}} {...args} />;",
-            "",
-            "export const Default = Template.bind({});",
-            "Default.args = {",
-            "};"
-          ]
-        }
-      ]
+  "[javascript]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
     }
+  },
+  "[javascriptreact]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    }
+  },
+  "[typescript]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    }
+  },
+  "[typescriptreact]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    }
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.stylelint": true
   }
 }
